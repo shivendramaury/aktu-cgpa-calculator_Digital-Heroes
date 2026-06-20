@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKTU SGPA Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+
+    <h1 id="mHead">AKTU CGPA CALCULATOR</h1>
+
+    <div id="mAbout">
+        <h3>Shivendra Maurya</h3>
+        <p>Email: shivendramaury@gmail.com</p>
+
+        <a
+    class="dhBtn"
+    href="https://digitalheroesco.com"
+    target="_blank">
+    Built for Digital Heroes
+</a>
+    </div>
+
+    <div id="topControls">
+
+        <select name="YEAR" id="year">
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+        </select>
+
+        <label class="switchWrap">
+
+            <span>Dark Mode</span>
+
+            <label class="switch">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+            </label>
+
+        </label>
+
+        <button id="reset">
+            Reset All Data
+        </button>
+
+    </div>
+
+    <div id="main">
+
+        <!-- Semester 1 -->
+
+        <div class="left">
+
+            <div class="sem">
+                <span class="circle">1</span>
+                <h2>Semester</h2>
+            </div>
+
+            <div class="sHead">
+                <h2>Subject</h2>
+                <h2>Internal</h2>
+                <h2>External</h2>
+            </div>
+
+            <div class="onesubjects">
+
+                <div class="sone">
+                    <h2>Physics(4)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>Engg. Math-1(4)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>Electrical(3)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>PPS(3)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>EVS(3)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>Physics Lab(1)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>Electrical Lab(1)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>Graphics(2)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>PPS Lab(1)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+            </div>
+
+            <div class="credit">
+                <h2>Total Credit :</h2>
+                <h2>Marks:</h2>
+                <h2>Percentage:</h2>
+            </div>
+
+            <div class="calculate">
+
+                <button class="calCGPA">
+                    Calculate CGPA
+                </button>
+
+                <h2>SGPA:</h2>
+
+              <button
+    class="downloadBtn"
+    style="display:none;">
+    Download Result
+</button>
+
+            </div>
+
+        </div>
+
+        <!-- Semester 2 starts here -->
+
+                <!-- Semester 2 -->
+
+        <div class="left">
+
+            <div class="sem">
+                <span class="circle">2</span>
+                <h2>Semester</h2>
+            </div>
+
+            <div class="sHead">
+                <h2>Subject</h2>
+                <h2>Internal</h2>
+                <h2>External</h2>
+            </div>
+
+            <div class="onesubjects">
+
+                <div class="sone">
+                    <h2>Physics(4)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>Engg. Math-1(4)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>Electrical(3)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>PPS(3)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>EVS(3)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>Physics Lab(1)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>Electrical Lab(1)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>Graphics(2)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+                <div class="sone">
+                    <h2>PPS Lab(1)</h2>
+                    <input type="number" min="0" max="30" placeholder="00">
+                    <input type="number" min="0" max="70" placeholder="00">
+                </div>
+
+            </div>
+
+            <div class="credit">
+                <h2>Total Credit :</h2>
+                <h2 id="marks2">Marks:</h2>
+                <h2 id="per2">Percentage:</h2>
+            </div>
+
+            <div class="calculate">
+
+                <button class="calCGPA">
+                    Calculate CGPA
+                </button>
+
+                <h2>SGPA:</h2>
+<button
+    class="downloadBtn"
+    style="display:none;">
+    Download Result
+</button>
+
+            </div>
+
+        </div>
+
+        <div id="Total">
+            <h2>Total:</h2>
+        </div>
+
+    </div>
+
+    <footer>
+        <marquee>
+            Developed by Shivendra Maurya
+        </marquee>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

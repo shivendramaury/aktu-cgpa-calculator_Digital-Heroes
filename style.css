@@ -1,0 +1,609 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html, body{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg,#a8edea,#fed6e3);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN CONTAINER */
+#main{
+    flex: 1;
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+#mHead{
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline 2px;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Developer Information */
+
+#mAbout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    gap: 5px;
+    color: brown;
+}
+
+#mAbout h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#mAbout p{
+    font-size: 15px;
+    color: #444;
+}
+
+/* Built for Digital Heroes Button */
+
+.dhBtn{
+    margin-top: 10px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg,#2563eb,#38bdf8);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.dhBtn:hover{
+    transform: scale(1.05);
+    background: linear-gradient(45deg,#1d4ed8,#0ea5e9);
+}
+
+/* TOP CONTROLS */
+
+#topControls{
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    min-height: 60px;
+}
+
+#year{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    font-size: large;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#year:hover{
+    cursor: pointer;
+    border: 2px solid brown;
+}
+
+#reset{
+    position: absolute;
+    right: 10px;
+    font-size: medium;
+    padding: 8px 16px;
+    background-color: beige;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#reset:hover{
+    cursor: pointer;
+    border: 2px solid blueviolet;
+}
+
+/* DARK MODE TEXT + SWITCH */
+
+.switchWrap{
+    position: absolute;
+    right: 150px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* SEMESTER BOX */
+
+.left{
+    margin: 10px;
+    padding: 20px;
+    width: 45%;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.left:hover{
+    transform: translateY(-3px);
+}
+
+/* HEADER */
+
+.sem{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.circle{
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(45deg,#43cea2,#185a9d);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* SUBJECT HEADER */
+
+.sHead{
+    display: grid;
+    grid-template-columns: 1fr 100px 100px;
+    background: linear-gradient(90deg,#667eea,#764ba2);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    gap: 10px;
+    align-items: center;
+}
+
+.sHead h2{
+    font-size: 16px;
+    text-align: center;
+}
+
+.sHead h2:first-child{
+    text-align: left;
+}
+
+/* INPUTS */
+
+input{
+    border: none;
+    border-radius: 6px;
+    height: 32px;
+    padding: 5px 8px;
+    background: rgba(255,255,255,0.8);
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+    width: 100%;
+    text-align: center;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 5px blue;
+}
+
+.onesubjects{
+    gap: 2px;
+    padding: 10px 0;
+    display: grid;
+}
+
+/* SUBJECT ROWS */
+
+.sone{
+    font-size: small;
+    display: grid;
+    grid-template-columns: 1fr 100px 100px;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.sone:last-child{
+    border-bottom: none;
+}
+
+.sone h2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sone input{
+    justify-self: center;
+}
+
+/* CREDIT SECTION */
+
+.credit{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    background: rgba(255,228,181,0.85);
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.credit h2{
+    font-size: 16px;
+}
+
+/* CALCULATE SECTION */
+
+.calculate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.calculate h2{
+    font-size: 18px;
+}
+
+/* BUTTON */
+
+.calCGPA{
+    background: linear-gradient(45deg,#0072ff,#00c6ff);
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: large;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.calCGPA:hover{
+    transform: scale(1.05);
+}
+
+/* DOWNLOAD BUTTON */
+
+.downloadBtn{
+    margin-top: 10px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg,#007bff,#00c6ff);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.downloadBtn:hover{
+    transform: scale(1.05);
+    background: linear-gradient(45deg,#0056b3,#0096c7);
+}
+
+/* TOTAL */
+
+#Total{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+}
+
+#Total h2{
+    font-size: 20px;
+}
+
+/* SWITCH */
+
+.switch{
+    width: 50px;
+    height: 24px;
+    position: relative;
+}
+
+.switch input{
+    display: none;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    background: #ccc;
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.slider:before{
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider{
+    background: #4f46e5;
+}
+
+input:checked + .slider:before{
+    transform: translateX(26px);
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: auto;
+    padding: 8px;
+    text-align: center;
+    background: rgba(255,255,255,0.6);
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark{
+    background: linear-gradient(135deg,#020617,#0f172a,#020617);
+    color: #e5e7eb;
+}
+
+body.dark .left{
+    background: rgba(15,23,42,0.9);
+    color: #e5e7eb;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+body.dark .sHead{
+    background: linear-gradient(90deg,#1e293b,#334155);
+}
+
+body.dark input{
+    background: rgba(30,41,59,0.9);
+    color: white;
+}
+
+body.dark .credit{
+    background: rgba(51,65,85,0.85);
+}
+
+body.dark .calCGPA{
+    background: linear-gradient(45deg,#2563eb,#38bdf8);
+}
+
+body.dark #reset{
+    background: #1e293b;
+    color: white;
+    border: 1px solid #475569;
+}
+
+body.dark .circle{
+    background: linear-gradient(45deg,#0ea5e9,#6366f1);
+}
+
+body.dark footer{
+    background: #020617;
+    color: #e5e7eb;
+}
+
+body.dark #mAbout{
+    color: white;
+}
+
+body.dark #mAbout p{
+    color: #cbd5e1;
+}
+
+body.dark input::placeholder{
+    color: #9ca3af;
+}
+
+/* ================= MOBILE VIEW ================= */
+
+@media (max-width: 900px){
+
+    #main{
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .left{
+        width: 100%;
+        margin: 0;
+        padding: 15px 12px;
+        border-radius: 12px;
+    }
+
+    .sem{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .sHead{
+        display: grid;
+        grid-template-columns: 1fr 70px 70px !important;
+        gap: 5px;
+        padding: 10px 8px;
+        margin-top: 15px;
+    }
+
+    .sHead h2{
+        font-size: 14px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .sHead h2:first-child{
+        text-align: left;
+    }
+
+    .sone{
+        display: grid;
+        grid-template-columns: 1fr 70px 70px !important;
+        gap: 5px;
+        padding: 8px 8px;
+        align-items: center;
+    }
+
+    .sone h2{
+        font-size: 13px;
+        white-space: normal;
+        line-height: 1.3;
+        word-break: break-word;
+    }
+
+    .sone input{
+        width: 100%;
+        height: 35px;
+        padding: 4px;
+        font-size: 13px;
+    }
+
+    .credit{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px;
+        margin-top: 15px;
+    }
+
+    .credit h2{
+        font-size: 14px;
+    }
+
+    .calculate{
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .calculate h2{
+        font-size: 16px;
+    }
+
+    .calCGPA{
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    #topControls{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        height: auto;
+        padding: 10px 5px;
+    }
+
+    #year,
+    .switchWrap,
+    #reset{
+        position: static;
+        transform: none;
+    }
+
+    #Total{
+        margin-top: 15px;
+        padding: 12px;
+    }
+
+    #Total h2{
+        font-size: 18px;
+    }
+}
+
+/* ================= SMALL DEVICES ================= */
+
+@media (max-width:480px){
+
+    .switchWrap span{
+        display:none;
+    }
+
+    #year{
+        width:100px;
+        font-size:13px;
+    }
+
+    .sHead{
+        grid-template-columns:1fr 60px 60px !important;
+    }
+
+    .sone{
+        grid-template-columns:1fr 60px 60px !important;
+    }
+
+    .sone h2{
+        font-size:11px;
+    }
+
+    .sone input{
+        height:32px;
+        font-size:11px;
+    }
+
+    .credit h2{
+        font-size:12px;
+    }
+
+    .calculate h2{
+        font-size:14px;
+    }
+
+    .circle{
+        width:25px;
+        height:25px;
+        font-size:14px;
+    }
+
+    .left{
+        padding:12px 8px;
+    }
+
+    #mAbout h3{
+        font-size:18px;
+    }
+
+    #mAbout p{
+        font-size:13px;
+    }
+
+    .dhBtn{
+        padding:10px 16px;
+        font-size:14px;
+    }
+}
